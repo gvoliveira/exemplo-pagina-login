@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Exemplo-Tela Login</title>
+	<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+	<div class="container painel-cadastro-ativo">  
+      
+      <div class="container__form container-cadastro">  
+           <form action="#" class="form" id="form1">  
+                <h2 class="titulo-form">Cadastre-se</h2>  
+                <input type="text" placeholder="Usuário" class="input" />  
+                <input type="email" placeholder="Email" class="input" />  
+                <input type="password" placeholder="Senha" class="input" />  
+                <button class="btn">Cadastrar</button>  
+           </form>  
+      </div>  
+      
+      <div class="container__form container-login">  
+           <form action="#" class="form" id="form2">  
+                <h2 class="titulo-form">Entrar</h2>  
+                <input type="email" placeholder="Email" class="input" />  
+                <input type="password" placeholder="Senha" class="input" />  
+                <a href="#" class="link">Esqueceu sua senha?</a>  
+                <button class="btn">Entrar</button>  
+           </form>  
+      </div>  
+	      <!-- Overlay --> 
+       <div class="container__overlay">  
+           <div class="overlay">  
+                <div class="painel-overlay overlay--left">  
+                     <button class="btn" id="logar">Entrar</button>  
+                </div>  
+                <div class="painel-overlay overlay--right">  
+                     <button class="btn" id="cadastre">Cadastrar</button>  
+                </div>  
+           </div>  
+      </div>  
+ </div>
+ <footer> <p>Unsplash Image por <strong><a href="https://unsplash.com/@domenicoloia" target="_blank">Domenico Loia</strong></a> </p> <p>Exemplo para aula de laboratório de programação 2 - 2ºTIN - Professor Gilberto</p> </footer>
+	
+<script>
+
+ const logarBtn = document.getElementById("logar");  
+ 
+ const cadastreBtn = document.getElementById("cadastre");  
+ 
+ const container = document.querySelector(".container"); 
+
+
+ logarBtn.addEventListener("click", () => {  
+      container.classList.remove("painel-cadastro-ativo");  
+ });  
+ cadastreBtn.addEventListener("click", () => {  
+      container.classList.add("painel-cadastro-ativo");  
+ }); 
+
+</script>
+
+</body>
+</html>
